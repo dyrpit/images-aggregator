@@ -1,11 +1,12 @@
 import { catsClient, dogsClient } from '../axios';
+import { CatsApiResponse, DogsApiResponse } from '../types';
 
-async function getCatsImages() {
-  return catsClient.get('?limit=10');
+async function getCatImages() {
+  return catsClient.get<CatsApiResponse>('?limit=10');
 }
 
-async function getDogsImages() {
-  return dogsClient.get('');
+async function getDogImages() {
+  return dogsClient.get<DogsApiResponse>('');
 }
 
-export { getCatsImages, getDogsImages };
+export { getCatImages, getDogImages };
