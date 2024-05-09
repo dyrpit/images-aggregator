@@ -2,6 +2,7 @@
   "name": "image-aggregator",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://dyrpit.github.io/images-aggregator",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
