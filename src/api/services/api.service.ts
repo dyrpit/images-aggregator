@@ -2,11 +2,13 @@ import { catsClient, dogsClient } from '../axios';
 import { CatsApiResponse, DogsApiResponse } from '../types';
 
 async function getCatImages() {
-  return catsClient.get<CatsApiResponse>('?limit=10');
+  const response = await catsClient.get<CatsApiResponse[]>('?limit=10');
+  return response.data?.map((cat) => cat.url);
 }
 
 async function getDogImages() {
-  return dogsClient.get<DogsApiResponse>('');
+  const response = await dogsClient.get<DogsApiResponse>('');
+  return response.data.message;
 }
 
 export { getCatImages, getDogImages };
