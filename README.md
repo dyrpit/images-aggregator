@@ -27,3 +27,7 @@ npm run dev
 ```
 
 2. Access the application in your web browser at `http://localhost:5173`.
+
+## Live Demo
+
+[Image Aggregator](https://dyrpit.github.io/images-aggregator/)
