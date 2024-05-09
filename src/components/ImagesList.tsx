@@ -42,7 +42,7 @@ function ImagesList() {
           <Image key={`${img}-${index}`} img={img} />
         ))}
       </ImageList>
-      {true && (
+      {isLoading && (
         <Box sx={{ margin: '20px auto', width: 40 }}>
           <CircularProgress color='secondary' />
         </Box>
